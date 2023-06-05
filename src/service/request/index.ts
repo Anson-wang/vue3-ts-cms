@@ -1,13 +1,13 @@
 import axios from 'axios'
 import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
-import type { HYrequestInterceptor, HYRequestConfig } from './types'
+import type { HYRequestInterceptor, HYRequestConfig } from './types'
 import { ElLoading } from 'element-plus'
 import { removeGlobalNode } from 'element-plus/lib/utils'
 
 const DEFAULT_LOADING = true
 class HYRequest {
   instance: AxiosInstance
-  interceptors?: HYrequestInterceptor
+  interceptors?: HYRequestInterceptor
   showLoading: boolean
   loading?: any
 
