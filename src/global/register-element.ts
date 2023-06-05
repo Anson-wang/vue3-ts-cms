@@ -1,5 +1,7 @@
 import { App } from 'vue'
-import 'element-plus/lib/theme-chalk/base.css'
+// import 'element-plus/lib/theme-chalk/base.css'
+import 'element-plus/theme-chalk/index.css'
+
 import {
   ElAside,
   ElAvatar,
