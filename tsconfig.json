@@ -1,6 +1,8 @@
 {
   "compilerOptions": {
+    // 目标代码 ts => js(es5/6/7)
     "target": "esnext",
+    // 目标代码使用的模块化方案（commonJS require/module.exports/es module import/export）
     "module": "esnext",
     "strict": true,
     "jsx": "preserve",
