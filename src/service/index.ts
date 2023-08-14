@@ -10,7 +10,8 @@ const hyRequest = new HYRequest({
       //携带token拦截
       const token = '' //从vuex取
       if (token) {
-        config.headers.Authorization = `bearer ${token}`
+        // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+        config.headers!.Authorization = `bearer ${token}`
       }
       console.log('请求成功的拦截')
       return config
