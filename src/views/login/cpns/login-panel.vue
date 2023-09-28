@@ -48,20 +48,20 @@ export default defineComponent({
       name: cacheName,
       password: cachePassword
     })
-    // const accountRef = ref<InstanceType<typeof LoginAccount>>()
+    const accountRef = ref<InstanceType<typeof LoginAccount>>()
 
-    // const loginAction = () => {
-    //   if (currentTab.value === 'account') {
-    //     accountRef.value?.accountLoginAction(isKeep.value)
-    //   }
-    // }
+    const loginAction = () => {
+      if (currentTab.value === 'account') {
+        accountRef.value?.accountLoginAction(isKeep.value)
+      }
+    }
 
     return {
       currentTab,
       account,
-      isKeep
-      // loginAction,
-      // accountRef
+      isKeep,
+      loginAction,
+      accountRef
     }
   }
 })

@@ -20,7 +20,7 @@ import { defineComponent, PropType, computed, ref } from 'vue'
 import { Account } from '../types'
 import { ElMessage } from 'element-plus'
 import localCache from '@/utils/cache'
-import { useStore } from '@/store/index'
+import { useStore } from 'vuex'
 
 export default defineComponent({
   props: {
@@ -71,6 +71,9 @@ export default defineComponent({
           if (isKeep) {
             localCache.setCache('name', name)
             localCache.setCache('password', password)
+          } else {
+            localCache.deleteCache('name')
+            localCache.deleteCache('password')
           }
 
           // 登录
