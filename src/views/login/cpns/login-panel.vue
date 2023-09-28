@@ -12,7 +12,7 @@
         <template #label>
           <span><i class="el-icon-mobile-phone"></i> 手机登录</span>
         </template>
-        <login-phone ref="formRef" />
+        <login-phone ref="phoneRef" />
       </el-tab-pane>
     </el-tabs>
     <div class="control-account">
@@ -49,10 +49,14 @@ export default defineComponent({
       password: cachePassword
     })
     const accountRef = ref<InstanceType<typeof LoginAccount>>()
+    const phoneRef = ref<InstanceType<typeof LoginPhone>>()
 
     const loginAction = () => {
       if (currentTab.value === 'account') {
         accountRef.value?.accountLoginAction(isKeep.value)
+      } else {
+        // phoneRef.value?.
+        console.log('调用phone登录')
       }
     }
 
@@ -61,7 +65,8 @@ export default defineComponent({
       account,
       isKeep,
       loginAction,
-      accountRef
+      accountRef,
+      phoneRef
     }
   }
 })
